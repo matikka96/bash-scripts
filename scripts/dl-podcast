@@ -1,0 +1,8 @@
+#!/bin/bash
+# Download video in audio format from url and save it into path variable.
+# Dependancy: youtube-dl
+
+path="/Users/matvei/Documents/Dropbox/Podcasts/%(title)s.%(ext)s"
+echo Download video podcast from url:
+read url
+youtube-dl -o $path -f m4a $url
